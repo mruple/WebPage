@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="animation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/UA Logo.svg"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="info.html">INFO</a></li>
+                    <li><a href="factorial.html">FACTORIAL</a></li>
+                    <li><a href="animation.html">ANIMATION</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section class="animation">
+        <img id="img1" src="images/zippy.jpeg" style="position: absolute; top: 50px; left: 50px; transition: all 1s ease-in-out;" />
+    </section>
+</body>
+<script>
+    var img = document.getElementById("img1");
+
+    function moveElement() {
+        //creating div object for container.        
+        const div = document.getElementsByClassName('container');
+        // - 50 and -45 is just to bring the image exactly at the center of the image on click position
+        posX = posX - 50;
+        posY = posY - 45;
+        //changing the top and left of the image (to update the position.)
+        img.style.top = `${posY}px`;
+        img.style.left = `${posX}px`;
+    }
+
+    // listening to the click mouse event on our div container.
+    var container = document.getElementsByClassName('container')[0];
+    document.addEventListener('click', function(event) {
+        console.log(event.clientX + " " + event.clientY);
+        // collecting the mouse click position in posX and posY respectively.
+        posX = event.clientX;
+        posY = event.clientY;
+        // calling the moveElement function onClick event.
+        moveElement();
+    });
+</script>
+</html>

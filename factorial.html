@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="factorial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="factorial.js">fact()</script> 
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/UA Logo.svg"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="info.html">INFO</a></li>
+                    <li><a href="factorial.html">FACTORIAL</a></li>
+                    <li><a href="animation.html">ANIMATION</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="factorial">
+            <h1>Welcome to the Factorial Calculator</h1>
+            <p>Please Enter A Number To Factorialize: <input id ="num"> </p>
+            <br>
+            <button onclick="fact()">Calculate</button>
+            <button onclick="location.reload()">Reset</button>
+            <p id="result"></p>
+
+        </div>
+    </section>
+</body>
+</html>
